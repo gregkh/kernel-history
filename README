@@ -1,0 +1,16 @@
+Linux Kernel Statistics
+
+In this repo is a number of different things that I use to keep
+statistics on the different Linux kernel releases.
+
+There are a number of subdirectories here:
+  logs/    - cleaned up kernel log files
+  scripts/ - scripts used to generate a number of different statistics
+
+Everything funnels down into the big spreadsheet, kernel_stats.ods
+
+If anyone has any questions, or fixes to the scripts, please let me
+know.
+
+Greg Kroah-Hartman
+<greg@kroah.com>
