@@ -49,6 +49,7 @@ sub include_category($$)
 		 ($filename eq "media") ||
 		 ($filename eq "mtd") ||
 		 ($filename eq "pcmcia") ||
+		 ($filename eq "target") ||
 		 ($filename eq "rdma") ||
 		 ($filename eq "rxrpc") ||
 		 ($filename eq "scsi") ||
