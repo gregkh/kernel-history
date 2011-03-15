@@ -1,0 +1,109 @@
+#!/bin/bash
+
+FILE1=`mktemp genstat.XXXXXX` || exit1
+FILE2=`mktemp genstat.XXXXXX` || exit1
+FILE3=`mktemp genstat.XXXXXX` || exit1
+
+
+echo "generating list of changesets"
+git log --pretty=oneline --no-merges v2.6.24-rc6..v2.6.24-rc8 > $FILE1
+cat $FILE1 | cut -f 1 -d ' ' > $FILE2
+rm $FILE1
+
+rm $FILE3
+touch $FILE3
+
+LINESIZE=`wc -l $FILE2 | awk '{print $1}'`
+echo "$LINESIZE changesets to work through..."
+LINENUM=0
+
+for COMMIT in `cat $FILE2`
+do
+	LINENUM=$(($LINENUM+1))
+	MOD100=$(($LINENUM/100))
+	MUL100=$(($MOD100*100))
+	if [[ $LINENUM = $MUL100 ]] ; then
+		echo -n "$LINENUM.."
+	fi
+
+	PARENT=`git show --pretty=format:%P $COMMIT | head -n 1`
+#	echo "working on $COMMIT with parent $PARENT"
+	git diff -M --numstat $PARENT..$COMMIT >> $FILE3
+done
+echo ""
+
+rm $FILE2
+
+echo "generating stats"
+ADD=0
+DEL=0
+MOD=0
+
+LINESIZE=`wc -l $FILE3 | awk '{print $1}'`
+echo "$LINESIZE diffs to work through..."
+LINENUM=0
+
+while read -r LINE
+do
+	LINENUM=$(($LINENUM+1))
+	MOD100=$(($LINENUM/100))
+	MUL100=$(($MOD100*100))
+	if [[ $LINENUM = $MUL100 ]] ; then
+		echo -n "$LINENUM.."
+	fi
+	A=0
+	D=0
+	A=`echo $LINE | awk '{print $1}'`
+	D=`echo $LINE | awk '{print $2}'`
+
+#	echo "\"$LINE\"  A=$A D=$D"
+	if [[ $A -eq $D ]] ; then
+#		echo "equal"
+		MOD=$(($MOD+$A))
+	elif [[ $A -lt $D ]] ; then
+#		echo "add less than del"
+		MOD=$(($MOD+$A))
+		DEL=$(($DEL+$D-$A))
+	else
+#		echo "add greater than del"
+		MOD=$(($MOD+$D))
+		ADD=$(($ADD+$A-$D))
+	fi
+
+#	echo "MOD=$MOD ADD=$ADD DEL=$DEL"
+#	echo "---"
+
+done < $FILE3
+
+echo ""
+
+echo "added    = $ADD"
+echo "deleted  = $DEL"
+echo "modified = $MOD"
+
+
+
+#echo "generating inserts"
+#INSERT=0
+#for IN in `cat x3 | awk '{print $1}'`
+#do
+#	INSERT=$(($INSERT+$IN))
+#done
+#
+#echo "generating deletions"
+#DELETE=0
+#for DEL in `cat x3 | awk '{print $2}'`
+#do
+#	DELETE=$(($DELETE+$DEL))
+#done
+#
+#echo "insert = $INSERT"
+#echo "delete = $DELETE"
+#
+#echo "lines added = $(($INSERT-$DELETE))"
+#if [[ $INSERT < $DELETE ]] ; then
+#	echo "modified = $INSERT"
+#else
+#	echo "modified = $DELETE"
+#fi
+

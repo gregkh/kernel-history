@@ -1,0 +1,47 @@
+#!/bin/bash
+
+CORE="init/ block/ ipc/ kernel/ lib/ mm/ include/linux/ include/keys/"
+DRIVERS="crypto/ drivers/ sound/ security/ include/acpi include/crypto include/media include/mtd include/pcmcia include/rdma include/rxrpc include/scsi/ include/sound/ include/video/"
+ARCH="arch/ include/asm-* include/math-emu/ include/xen"
+NET="net/ include/net/"
+FS="fs/"
+MISC="Documentation/ scripts/ usr/"
+
+
+echo `ketchup -m`
+echo "files in whole tree   `find . -type f | wc -l`"
+echo ""
+echo "files in core         `find $CORE -type f | wc -l`"
+echo "files in drivers      `find $DRIVERS -type f | wc -l`"
+echo "files in architecture `find $ARCH -type f | wc -l`"
+echo "files in network      `find $NET -type f | wc -l`"
+echo "files in filesystems  `find $FS -type f | wc -l`"
+echo "files in miscellaneus `find $MISC -type f | wc -l`"
+
+echo ""
+
+echo "lines in whole tree   `find . -type f | xargs wc -l | grep total | cut -f 1 -d 't'`"
+
+
+CORE_LINES=`find $CORE -type f | xargs wc -l | grep total | cut -f 1 -d 't'`
+echo "lines in core         $CORE_LINES"
+
+DRIVERS_LINES=`find $DRIVERS -type f | xargs wc -l | grep total | cut -f 1 -d 't'`
+echo "lines in drivers      $DRIVERS_LINES"
+
+ARCH_LINES=`find $ARCH -type f | xargs wc -l | grep total | cut -f 1 -d 't'`
+echo "lines in architecture $ARCH_LINES"
+
+NET_LINES=`find $NET -type f | xargs wc -l | grep total | cut -f 1 -d 't'`
+echo "lines in network      $NET_LINES"
+
+FS_LINES=`find $FS -type f | xargs wc -l | grep total | cut -f 1 -d 't'`
+echo "lines in filesystems  $FS_LINES"
+
+MISC_LINES=`find $MISC -type f | xargs wc -l | grep total | cut -f 1 -d 't'`
+echo "lines in miscellaneus $MISC_LINES"
+
+
+
+
+

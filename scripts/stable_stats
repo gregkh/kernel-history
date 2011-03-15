@@ -1,0 +1,61 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+	echo -e "Usage:\t $0 minor_kernel_release_number \ne.g.\t $0 35"
+	exit 1
+fi
+
+VERSION=$1
+
+print_version()
+{
+	printf "2.6.$VERSION.$SUB\t"
+#	printf "released on $date\n"
+	printf "$date\t"
+#	printf "$(($count - 1)) commits\n"
+	printf "$(($count - 1))\n"
+}
+
+get_date()
+{
+	# get the commit id of the release
+	commit=`git show v2.6.$VERSION.$SUB | grep commit | cut -f 2 -d ' '`
+#	echo "commit = $commit"
+#	date=`git show v2.6.$VERSION.$SUB | grep Date: | tail -n 1`
+	date=`git show $commit --format="%ci"| head -n 1 | cut -f 1 -d ' '`
+
+}
+
+do_version()
+{
+	get_date
+	PREV=$(($SUB - 1))
+
+	# get the commit id of the release
+#	commit=`git show v2.6.$VERSION.$SUB | grep commit | cut -f 2 -d ' '`
+#	echo "commit = $commit"
+##	date=`git show v2.6.$VERSION.$SUB | grep Date: | tail -n 1`
+#	date=`git show $commit --format="%ci"| head -n 1`
+	count=`git log v2.6.$VERSION.$PREV..v2.6.$VERSION.$SUB | grep Author: | wc -l`
+	print_version
+}
+
+# do the first release first
+#date=`git show v2.6.$VERSION.1 | grep Date: | tail -n 1`
+count=`git log v2.6.$VERSION..v2.6.$VERSION.1 | grep Author: | wc -l`
+SUB=1
+get_date
+print_version
+
+for SUB in {2..100}
+do
+	# check the version is here
+	TMP=`git show v2.6.$VERSION.$SUB --pretty=oneline 2>/dev/null`
+	if [ x"$TMP" = x ]; then
+		# abort
+		exit 1
+	fi
+
+	# it is, so print out the version information
+	do_version
+done
