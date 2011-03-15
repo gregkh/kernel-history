@@ -7,7 +7,7 @@ my @fs_files = ("fs");
 my @driver_files = ("crypto", "drivers", "sound", "security");
 my @net_files = ("net");
 my @arch_files = ("arch");
-my @misc_files = ("Documentation", "scripts", "samples", "usr", "MAINTAINERS", "CREDITS", "README", ".gitignore", "Kbuild", "Makefile", "COPYING", "REPORTING-BUGS", ".mailmap", "tools");
+my @misc_files = ("Documentation", "scripts", "samples", "usr", "MAINTAINERS", "CREDITS", "README", ".gitignore", "Kbuild", "Makefile", "COPYING", "REPORTING-BUGS", ".mailmap", "tools", "Kconfig");
 my @firmware_files = ("firmware");
 
 my $overall_lines = 0;
