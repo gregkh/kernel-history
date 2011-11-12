@@ -13,7 +13,7 @@ contributions.  The first can be found at:
 and the latest can be found at:
 	http://www.linuxfoundation.org/publications/whowriteslinux.pdf
 
-Your email address shows up in the changelog for the 2.6.38 kernel
+Your email address shows up in the changelog for the 3.1 kernel
 release as a contributor, but I can't seem to place it with a company.
 If you don't mind, could you let me know what company you work for?  Or
 if no company, do you want to be classified in any of these other
@@ -37,7 +37,7 @@ If you want, this mapping will be kept private and only myself and Jon
 Corbet (of lwn.net) will have access to it.
 
 The scripts involved in this can be found at:
-	http://www.kernel.org/pub/linux/kernel/people/gregkh/kernel_history/
+	https://github.com/gregkh/kernel-history
 if you are curious.
 
 If you have any questions about this, please let me know.
