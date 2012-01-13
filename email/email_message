@@ -8,12 +8,10 @@ work on the Linux kernel.
 Jonathan Corbet has also been writing articles at lwn.net about this
 topic, and we share the same set of scripts, as well as we write a
 yearly article for the Linux Foundation about Linux kernel
-contributions.  The first can be found at:
-	http://www.linuxfoundation.org/publications/linuxkerneldevelopment.php
-and the latest can be found at:
+contributions.  An example of this can be found at:
 	http://www.linuxfoundation.org/publications/whowriteslinux.pdf
 
-Your email address shows up in the changelog for the 3.1 kernel
+Your email address shows up in the changelog for the 3.2 kernel
 release as a contributor, but I can't seem to place it with a company.
 If you don't mind, could you let me know what company you work for?  Or
 if no company, do you want to be classified in any of these other
