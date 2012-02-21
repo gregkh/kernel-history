@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ $# -ne 1 ]; then
-	echo -e "Usage:\t $0 minor_kernel_release_number \ne.g.\t $0 35"
+	echo -e "Usage:\t $0 kernel_major_number\ne.g.\t $0 3.0"
 	exit 1
 fi
 
@@ -9,7 +9,7 @@ VERSION=$1
 
 print_version()
 {
-	printf "2.6.$VERSION.$SUB\t"
+	printf "$VERSION.$SUB\t"
 #	printf "released on $date\n"
 	printf "$date\t"
 #	printf "$(($count - 1)) commits\n"
@@ -19,7 +19,7 @@ print_version()
 get_date()
 {
 	# get the commit id of the release
-	commit=`git show v2.6.$VERSION.$SUB | grep commit | cut -f 2 -d ' '`
+	commit=`git show v$VERSION.$SUB | grep commit | cut -f 2 -d ' '`
 #	echo "commit = $commit"
 #	date=`git show v2.6.$VERSION.$SUB | grep Date: | tail -n 1`
 	date=`git show $commit --format="%ci"| head -n 1 | cut -f 1 -d ' '`
@@ -36,26 +36,30 @@ do_version()
 #	echo "commit = $commit"
 ##	date=`git show v2.6.$VERSION.$SUB | grep Date: | tail -n 1`
 #	date=`git show $commit --format="%ci"| head -n 1`
-	count=`git log v2.6.$VERSION.$PREV..v2.6.$VERSION.$SUB | grep Author: | wc -l`
+	count=`git log v$VERSION.$PREV..v$VERSION.$SUB | grep Author: | wc -l`
+	total_count=$(($total_count + $count - 1))
 	print_version
 }
 
 # do the first release first
-#date=`git show v2.6.$VERSION.1 | grep Date: | tail -n 1`
-count=`git log v2.6.$VERSION..v2.6.$VERSION.1 | grep Author: | wc -l`
+count=`git log v$VERSION..v$VERSION.1 | grep Author: | wc -l`
 SUB=1
 get_date
 print_version
+total_count=$(($count - 1))
 
 for SUB in {2..100}
 do
 	# check the version is here
-	TMP=`git show v2.6.$VERSION.$SUB --pretty=oneline 2>/dev/null`
+	TMP=`git show v$VERSION.$SUB --pretty=oneline 2>/dev/null`
 	if [ x"$TMP" = x ]; then
 		# abort
+		printf "Total number of fixes:\t$(($total_count))\n"
 		exit 1
 	fi
 
 	# it is, so print out the version information
 	do_version
 done
+
+
