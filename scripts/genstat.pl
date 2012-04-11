@@ -184,9 +184,9 @@ sub filename_category($$$$$)
 sub print_data($$$$)
 {
 	my ($basename, $add, $del, $mod) = @_;
-	my $percent_add = $add/$overall_add*100;
-	my $percent_del = $del/$overall_del*100;
-	my $percent_mod = $mod/$overall_mod*100;
+	my $percent_add = $overall_add ? $add/$overall_add*100 : 0;
+	my $percent_del = $overall_del ? $del/$overall_del*100 : 0;
+	my $percent_mod = $overall_mod ? $mod/$overall_mod*100 : 0;
 
 	print "\n$basename:\n";
 	printf "\tadded    = %8d\t%6.2f", $add, $percent_add;
