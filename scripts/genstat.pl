@@ -226,8 +226,8 @@ while (<GIT>) {
 	my @arr = split;
 	$commit = $arr[0];
 	# print "commit = $commit\n";
+	# system("git show --pretty=oneline --numstat $commit > genstat.$commit");
 
-	system("git show --pretty=oneline --numstat $commit > genstat.$commit");
 	open DIFF, "git show --pretty=oneline --numstat $commit |";
 	my $temp = <DIFF>;
 	while (<DIFF>) {
