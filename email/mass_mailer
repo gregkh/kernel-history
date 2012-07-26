@@ -1,6 +1,6 @@
 #!/bin/sh
-addrfile="addresses-3.4"
-subject="Linux kernel development reports for the 3.4 release"
+addrfile="addresses-3.5"
+subject="Linux kernel development reports for the 3.5 release"
 msg="email_message"
 
 for address in `cat $addrfile`
