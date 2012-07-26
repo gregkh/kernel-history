@@ -1,0 +1,5 @@
+to gather emails:
+	grep @ r | cut -f 1 -d ' ' | sort | uniq > addresses
+
+filtering out emails from prior lists:
+	comm -2 -3 addresses addresses-3.old
