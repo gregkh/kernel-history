@@ -9,7 +9,7 @@ VERSION=$1
 
 print_version()
 {
-	printf "$VERSION.$SUB\t"
+	printf "\"$VERSION.$SUB\"\t"
 #	printf "released on $date\n"
 	printf "$date\t"
 #	printf "$(($count - 1)) commits\n"
