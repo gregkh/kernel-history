@@ -102,6 +102,7 @@ sub include_category($$$$$)
 		 ($filename eq "rdma") ||
 		 ($filename eq "rxrpc") ||
 		 ($filename eq "scsi") ||
+		 ($filename eq "ras") ||
 		 ($filename eq "sound") ||
 		 ($filename eq "video")) {
 		$driver_add += $add;
