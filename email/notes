@@ -3,3 +3,6 @@ to gather emails:
 
 filtering out emails from prior lists:
 	comm -2 -3 addresses addresses-3.old
+
+Handling emails when received from a mbox
+	cat mbox | formail  -x "From:" -s cut -f 2 -d '<' | cut -f 1 -d '>'
