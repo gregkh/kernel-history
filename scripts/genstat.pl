@@ -88,6 +88,7 @@ sub include_category($$$$$)
 	if (($filename eq "linux") ||
 	    ($filename eq "keys") ||
 	    ($filename eq "trace") ||
+	    ($filename eq "uapi") ||
 	    ($filename eq "Kbuild")) {
 		$core_add += $add;
 		$core_del += $del;

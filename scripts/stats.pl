@@ -40,6 +40,7 @@ sub include_category($$)
 	if (($filename eq "linux") ||
 	    ($filename eq "keys") ||
 	    ($filename eq "trace") ||
+	    ($filename eq "uapi") ||
 	    ($filename eq "Kbuild")) {
 		$core_lines += $lines;
 		$core_files++;
