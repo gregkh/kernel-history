@@ -94,6 +94,7 @@ sub include_category($$$$$)
 		$core_del += $del;
 		$core_mod += $mod;
 	} elsif (($filename eq "acpi") ||
+		 ($filename eq "clocksource") ||
 		 ($filename eq "crypto") ||
 		 ($filename eq "drm") ||
 		 ($filename eq "media") ||
@@ -133,7 +134,7 @@ sub include_category($$$$$)
 				$filename = substr($filename, 1, $l-1);
 				include_category($filename, $commit, $add, $del, $mod);
 			} else {
-				unknown($filename, $commit, $add, $del, $mod);
+				print "unknown include filename='$filename' commit=$commit add=$add del=$del mod=$mod\n";
 			}
 		}
 	}
