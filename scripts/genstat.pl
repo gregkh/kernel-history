@@ -115,7 +115,8 @@ sub include_category($$$$$)
 		$net_del += $del;
 		$net_mod += $mod;
 	} elsif (($filename eq "xen") ||
-		 ($filename eq "math-emu")) {
+		 ($filename eq "math-emu") ||
+		 ($filename eq "dt-bindings")) {
 		$arch_add += $add;
 		$arch_del += $del;
 		$arch_mod += $mod;

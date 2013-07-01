@@ -62,7 +62,8 @@ sub include_category($$)
 		$net_lines += $lines;
 		$net_files++;
 	} elsif (($filename eq "xen") ||
-		 ($filename eq "math-emu")) {
+		 ($filename eq "math-emu") ||
+		 ($filename eq "dt-bindings")) {
 		$arch_lines += $lines;
 		$arch_files++;
 	} else {
