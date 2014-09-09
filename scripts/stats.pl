@@ -128,7 +128,8 @@ sub print_data($$$)
 	print "%\n";
 }
 
-my $version = `ketchup -m`;
+#my $version = `ketchup -m`;
+my $version = `kv`;
 print "kernel version: $version\n";
 
 open FILES, "find . -type f |" || die "cant run find";
