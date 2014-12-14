@@ -106,6 +106,7 @@ sub include_category($$$$$)
 		 ($filename eq "scsi") ||
 		 ($filename eq "ras") ||
 		 ($filename eq "sound") ||
+		 ($filename eq "kvm") ||
 		 ($filename eq "video")) {
 		$driver_add += $add;
 		$driver_del += $del;

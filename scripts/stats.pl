@@ -55,6 +55,7 @@ sub include_category($$)
 		 ($filename eq "rxrpc") ||
 		 ($filename eq "scsi") ||
 		 ($filename eq "sound") ||
+		 ($filename eq "kvm") ||
 		 ($filename eq "video")) {
 		$driver_lines += $lines;
 		$driver_files++;
