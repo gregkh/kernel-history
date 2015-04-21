@@ -56,6 +56,7 @@ sub include_category($$)
 		 ($filename eq "scsi") ||
 		 ($filename eq "sound") ||
 		 ($filename eq "kvm") ||
+		 ($filename eq "soc") ||
 		 ($filename eq "video")) {
 		$driver_lines += $lines;
 		$driver_files++;
