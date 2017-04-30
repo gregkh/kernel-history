@@ -48,7 +48,7 @@ get_date
 print_version
 total_count=$(($count - 1))
 
-for SUB in {2..100}
+for SUB in {2..200}
 do
 	# check the version is here
 	TMP=`git show v$VERSION.$SUB --pretty=oneline 2>/dev/null`
