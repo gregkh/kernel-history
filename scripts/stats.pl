@@ -7,7 +7,13 @@ my @fs_files = ("fs");
 my @driver_files = ("crypto", "drivers", "sound", "security");
 my @net_files = ("net");
 my @arch_files = ("arch");
-my @misc_files = ("Documentation", "scripts", "samples", "usr", "MAINTAINERS", "CREDITS", "README", ".gitignore", "Kbuild", "Makefile", "COPYING", "REPORTING-BUGS", ".mailmap", "tools", "Kconfig");
+my @misc_files = (
+		"Documentation", "scripts", "samples", "usr",
+		"MAINTAINERS", "CREDITS", "README", ".gitignore",
+		"Kbuild", "Makefile", "COPYING", "REPORTING-BUGS",
+		".mailmap", "tools", "Kconfig", "certs", ".cocciconfig",
+		".gitattributes", ".get_maintainer.ignore",
+	);
 my @firmware_files = ("firmware");
 
 my $overall_lines = 0;
@@ -48,10 +54,12 @@ sub include_category($$)
 		 ($filename eq "drm") ||
 		 ($filename eq "crypto") ||
 		 ($filename eq "media") ||
+		 ($filename eq "misc") ||
 		 ($filename eq "mtd") ||
 		 ($filename eq "pcmcia") ||
 		 ($filename eq "target") ||
 		 ($filename eq "rdma") ||
+		 ($filename eq "ras") ||
 		 ($filename eq "rxrpc") ||
 		 ($filename eq "scsi") ||
 		 ($filename eq "sound") ||
