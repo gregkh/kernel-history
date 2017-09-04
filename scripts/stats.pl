@@ -1,6 +1,7 @@
 #!/usr/bin/perl -w
 
-
+use warnings;
+use strict;
 
 my @core_files = ("init", "block", "ipc", "kernel", "lib", "mm", "virt");
 my @fs_files = ("fs");
@@ -33,10 +34,10 @@ my $misc_files = 0;
 my $firmware_lines = 0;
 my $firmware_files = 0;
 
-sub unknown($$)
+sub unknown($$$)
 {
-	my ($filename, $lines) = @_;
-	print "unknown filename='$filename' lines=$lines\n";
+	my ($category, $filename, $lines) = @_;
+	print "unknown category='$category' filename='$filename' lines=$lines\n";
 }
 
 sub include_category($$)
@@ -52,8 +53,10 @@ sub include_category($$)
 		$core_files++;
 	} elsif (($filename eq "acpi") ||
 		 ($filename eq "drm") ||
+		 ($filename eq "clocksource") ||
 		 ($filename eq "crypto") ||
 		 ($filename eq "media") ||
+		 ($filename eq "memory") ||
 		 ($filename eq "misc") ||
 		 ($filename eq "mtd") ||
 		 ($filename eq "pcmcia") ||
@@ -83,7 +86,7 @@ sub include_category($$)
 			$arch_lines += $lines;
 			$arch_files++;
 		} else {
-			unknown($filename, $lines);
+			unknown("include", $filename, $lines);
 		}
 	}
 }
@@ -119,7 +122,7 @@ sub filename_category($$)
 		$firmware_lines += $lines;
 		$firmware_files++;
 	} else {
-		unknown($filename, $lines);
+		unknown("files", $filename, $lines);
 	}
 
 }
