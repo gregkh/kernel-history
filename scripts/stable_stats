@@ -48,18 +48,16 @@ get_date
 print_version
 total_count=$(($count - 1))
 
+# make range larger once we pass 200 for any one kernel release...
 for SUB in {2..200}
 do
 	# check the version is here
 	TMP=`git show v$VERSION.$SUB --pretty=oneline 2>/dev/null`
-	if [ x"$TMP" = x ]; then
-		# abort
-		printf "Total number of fixes:\t$(($total_count))\n"
-		exit 1
+	if [ x"$TMP" != x ]; then
+		# it is, so print out the version information
+		do_version
 	fi
-
-	# it is, so print out the version information
-	do_version
 done
 
+printf "Total number of fixes:\t$(($total_count))\n"
 
