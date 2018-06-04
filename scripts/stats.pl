@@ -13,7 +13,8 @@ my @misc_files = (
 		"MAINTAINERS", "CREDITS", "README", ".gitignore",
 		"Kbuild", "Makefile", "COPYING", "REPORTING-BUGS",
 		".mailmap", "tools", "Kconfig", "certs", ".cocciconfig",
-		".gitattributes", ".get_maintainer.ignore",
+		".gitattributes", ".get_maintainer.ignore", "LICENSES",
+		".clang-format",
 	);
 my @firmware_files = ("firmware");
 
