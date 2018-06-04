@@ -94,7 +94,6 @@ sub include_category($$)
 
 sub filename_category($$)
 {
-
 	my ($filename, $lines) = @_;
 	my @f = split(/\//,$filename);
 	my $basename = $f[1];
@@ -142,6 +141,23 @@ sub print_data($$$)
 	print "%\n";
 }
 
+sub word_count($)
+{
+	my ($filename) = @_;
+
+	# dog slow...
+	#my $wc = `cat $filename | wc -l`;
+	#chomp $wc;
+
+	open(F, "< $filename") or die "can't open $filename: $!";
+	1 while <F>;
+	my $wc = $.;
+	close(F);
+
+	return $wc;
+}
+
+
 #my $version = `ketchup -m`;
 my $version = `kv`;
 print "kernel version: $version\n";
@@ -161,11 +177,7 @@ while (<FILES>) {
 	my @arr = split;
 	my $filename = $_;
 
-	my $wc = `cat $_ | wc -l`;
-	chomp $wc;
-	my @line_arr = split($wc);
-#	$lines = $line_arr[0];
-#	print "wc = '$wc' lines = '$lines'\n";
+	my $wc = word_count($filename);
 	$overall_lines += $wc;
 
 	filename_category($filename, $wc);
