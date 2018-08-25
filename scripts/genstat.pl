@@ -46,7 +46,7 @@ my @fs_files = ("fs");
 my @driver_files = ("crypto", "drivers", "sound", "security");
 my @net_files = ("net");
 my @arch_files = ("arch");
-my @misc_files = ("Documentation", "scripts", "samples", "usr", "MAINTAINERS", "CREDITS", "README", ".gitignore", "Kbuild", "Makefile", "REPORTING-BUGS", ".mailmap", "COPYING", "tools", "Kconfig");
+my @misc_files = ("Documentation", "scripts", "samples", "usr", "MAINTAINERS", "CREDITS", "README", ".gitignore", "Kbuild", "Makefile", "REPORTING-BUGS", ".mailmap", "COPYING", "tools", "Kconfig", "LICENSES", "certs");
 my @firmware_files = ("firmware");
 
 my $overall_add = 0;
@@ -99,6 +99,7 @@ sub include_category($$$$$)
 		 ($filename eq "drm") ||
 		 ($filename eq "media") ||
 		 ($filename eq "mtd") ||
+		 ($filename eq "misc") ||
 		 ($filename eq "pcmcia") ||
 		 ($filename eq "target") ||
 		 ($filename eq "rdma") ||
