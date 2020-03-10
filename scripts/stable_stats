@@ -48,8 +48,8 @@ get_date
 print_version
 total_count=$(($count - 1))
 
-# make range larger once we pass 200 for any one kernel release...
-for SUB in {2..200}
+# make range larger once we pass 400 for any one kernel release...
+for SUB in {2..400}
 do
 	# check the version is here
 	TMP=`git show v$VERSION.$SUB --pretty=oneline 2>/dev/null`
