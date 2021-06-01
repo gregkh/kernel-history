@@ -77,9 +77,13 @@ sub include_category($$)
 		$net_files++;
 	} elsif (($filename eq "xen") ||
 		 ($filename eq "math-emu") ||
+		 ($filename eq "vdso") ||
 		 ($filename eq "dt-bindings")) {
 		$arch_lines += $lines;
 		$arch_files++;
+	} elsif ($filename eq "kunit") {
+		$misc_lines += $lines;
+		$misc_files++;
 	} else {
 		# see if this is arch
 		my @a = split(/-/,$filename);
