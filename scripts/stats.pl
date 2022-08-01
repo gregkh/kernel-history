@@ -53,22 +53,23 @@ sub include_category($$)
 		$core_lines += $lines;
 		$core_files++;
 	} elsif (($filename eq "acpi") ||
-		 ($filename eq "drm") ||
 		 ($filename eq "clocksource") ||
 		 ($filename eq "crypto") ||
+		 ($filename eq "drm") ||
+		 ($filename eq "kvm") ||
 		 ($filename eq "media") ||
 		 ($filename eq "memory") ||
 		 ($filename eq "misc") ||
 		 ($filename eq "mtd") ||
 		 ($filename eq "pcmcia") ||
-		 ($filename eq "target") ||
-		 ($filename eq "rdma") ||
 		 ($filename eq "ras") ||
+		 ($filename eq "rdma") ||
 		 ($filename eq "rxrpc") ||
 		 ($filename eq "scsi") ||
-		 ($filename eq "sound") ||
-		 ($filename eq "kvm") ||
 		 ($filename eq "soc") ||
+		 ($filename eq "sound") ||
+		 ($filename eq "target") ||
+		 ($filename eq "ufs") ||
 		 ($filename eq "video")) {
 		$driver_lines += $lines;
 		$driver_files++;
