@@ -1,56 +1,19 @@
-comm -2 -3 x addresses-3.0 > x01
-comm -2 -3 x01 addresses-3.1 > x02
-comm -2 -3 x02 addresses-3.2 > x03
-comm -2 -3 x03 addresses-3.3 > x04
-comm -2 -3 x04 addresses-3.4 > x05
-comm -2 -3 x05 addresses-3.5 > x06
-comm -2 -3 x06 addresses-3.6 > x07
-comm -2 -3 x07 addresses-3.7 > x08
-comm -2 -3 x08 addresses-3.8 > x09
-comm -2 -3 x09 addresses-3.9 > x10
-comm -2 -3 x10 addresses-3.10 > x11
-comm -2 -3 x11 addresses-3.11 > x12
-comm -2 -3 x12 addresses-3.12 > x13
-comm -2 -3 x13 addresses-3.13 > x14
-comm -2 -3 x14 addresses-3.14 > x15
-comm -2 -3 x15 addresses-3.15 > x16
-comm -2 -3 x16 addresses-3.16 > x17
-comm -2 -3 x17 addresses-3.17 > x18
-comm -2 -3 x18 addresses-3.18 > x19
-comm -2 -3 x19 addresses-3.19 > x20
-comm -2 -3 x20 addresses-4.0 > x21
-comm -2 -3 x21 addresses-4.1 > x22
-comm -2 -3 x22 addresses-4.2 > x23
-comm -2 -3 x23 addresses-4.3 > x24
-comm -2 -3 x24 addresses-4.4 > x25
-comm -2 -3 x25 addresses-4.5 > x26
-comm -2 -3 x26 addresses-4.6 > x27
-comm -2 -3 x27 addresses-4.7 > x28
-comm -2 -3 x28 addresses-4.8 > x29
-comm -2 -3 x29 addresses-4.9 > x30
-comm -2 -3 x30 addresses-4.10 > x31
-comm -2 -3 x31 addresses-4.11 > x32
-comm -2 -3 x32 addresses-4.12 > x33
-comm -2 -3 x33 addresses-4.13 > x34
-comm -2 -3 x34 addresses-4.14 > x35
-comm -2 -3 x35 addresses-4.15 > x36
-comm -2 -3 x36 addresses-4.16 > x37
-comm -2 -3 x37 addresses-4.17 > x38
-comm -2 -3 x38 addresses-4.18 > x39
-comm -2 -3 x39 addresses-4.19 > x40
-comm -2 -3 x40 addresses-4.20 > x41
-comm -2 -3 x41 addresses-5.0  > x42
-comm -2 -3 x42 addresses-5.1  > x43
-comm -2 -3 x43 addresses-5.2  > x44
-comm -2 -3 x44 addresses-5.3  > x45
-comm -2 -3 x45 addresses-5.4  > x46
-comm -2 -3 x46 addresses-5.5  > x47
-comm -2 -3 x47 addresses-5.6  > x48
-comm -2 -3 x48 addresses-5.7  > x49
-comm -2 -3 x49 addresses-5.8  > x50
-comm -2 -3 x50 addresses-5.9  > x51
-comm -2 -3 x51 addresses-5.10 > x52
-comm -2 -3 x52 addresses-5.11 > x53
-comm -2 -3 x53 addresses-5.12 > x54
-comm -2 -3 x54 addresses-5.13 > x55
-comm -2 -3 x55 addresses-5.14 > x56
+#!/bin/bash
+
+ALL_ADDRESSES=$(mktemp "all-XXXXX") || exit 1
+
+cat addresses-* | sort | uniq >> ${ALL_ADDRESSES}
+
+comm -2 -3 x ${ALL_ADDRESSES} > x01
+
+rm ${ALL_ADDRESSES}
+
+exit
+
+#comm -2 -3 x addresses-3.0 > x01
+#comm -2 -3 x01 addresses-3.1 > x02
+#comm -2 -3 x02 addresses-3.2 > x03
+#comm -2 -3 x03 addresses-3.3 > x04
+#comm -2 -3 x04 addresses-3.4 > x05
+#comm -2 -3 x05 addresses-3.5 > x06
+# and so on...
