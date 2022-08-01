@@ -1,11 +1,12 @@
 #!/bin/sh
-addrfile="addresses-5.16"
-subject="Linux kernel development reports for the 5.16 release"
+kernel_version="5.17"
+addrfile="addresses-${kernel_version}"
+subject="Linux kernel development reports for the ${kernel_version} release"
 msg="email_message"
 
 for address in `cat $addrfile`
 do
-	echo "sending to $address"
+	echo "sending message for ${kernel_version} to $address"
 	mutt -s "$subject" "$address" <  $msg >> spam.log 2>&1
 #	sleep 1
 done
