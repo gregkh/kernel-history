@@ -1,5 +1,5 @@
 #!/bin/sh
-kernel_version="5.18"
+kernel_version="5.19"
 addrfile="addresses-${kernel_version}"
 subject="Linux kernel development reports for the ${kernel_version} release"
 msg="email_message"
