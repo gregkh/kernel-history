@@ -3160,7 +3160,7 @@ Date:   Tue Aug 16 16:38:28 2005 +0100
 
     NTFS: Fix bug in mft record writing where we forgot to set the device in
           the buffers when mapping them after the VM had discarded them.
-          Thanks to Martin MOKREJŠ for the bug report.
+          Thanks to Martin MOKREJÅ  for the bug report.
     
     Signed-off-by: Anton Altaparmakov <aia21@cantab.net>
 
@@ -3360,7 +3360,7 @@ Date:   Sun Aug 14 18:21:30 2005 -0700
       0b2bfb4e7ff61f286676867c3508569bea6fbf7a
         ACPI: increase PCIBIOS_MIN_IO on x86
     
-    since Lukas Sandströ<lukass@etek.chalmers.se> reports that this breaks
+    since Lukas SandstrÃ¶<lukass@etek.chalmers.se> reports that this breaks
     his on-board nvidia audio.
     
     We should re-visit this later. For now we revert the change
@@ -10677,7 +10677,7 @@ Date:   Wed Jul 27 04:55:54 2005 -0300
     Signed-off-by: Linus Torvalds <torvalds@osdl.org>
 
 commit bf85fa6c878aa3968df47d7f70a2b506c3e53b99
-Author: Anton W�llert <a.woellert@gmail.com>
+Author: Anton Wöllert <a.woellert@gmail.com>
 Date:   Wed Jul 27 04:45:17 2005 -0300
 
     [PATCH] ppc32: 8xx avoid icbi misbehaviour in __flush_dcache_icache_phys
@@ -19651,7 +19651,7 @@ Date:   Sun Jul 10 19:58:12 2005 +0100
     
     Patch from Tony Lindgren
     
-    This patch by Juha Yrjölä and other OMAP developers splits
+    This patch by Juha YrjÃ¶lÃ¤ and other OMAP developers splits
     OMAP1 specific common code into OMAP1 id, io, and serial
     code in mach-omap1 directory.
     
@@ -21185,7 +21185,7 @@ Date:   Thu Jul 7 17:57:58 2005 -0700
 
     [PATCH] dvb: ttpci: budget-av / tu1216 fix for QAM128
     
-    Fix for QAM128 in VHF band suggested by Timo Helki�.
+    Fix for QAM128 in VHF band suggested by Timo Helkiö.
     
     Signed-off-by: Johannes Stezenbach <js@linuxtv.org>
     Signed-off-by: Andrew Morton <akpm@osdl.org>
@@ -24972,7 +24972,7 @@ Date:   Tue Jul 5 14:08:10 2005 -0700
     be accessed using negative offsets (also similar to skb_copy_bits),
     anyone using negative offsets needs to verify them himself.
     
-    Thanks to Thomas V�gtle <thomas.voegtle@coreworks.de> for verifying the
+    Thanks to Thomas Vögtle <thomas.voegtle@coreworks.de> for verifying the
     problem by crashing his machine and providing me with an Oops.
     
     Signed-off-by: Patrick McHardy <kaber@trash.net>
@@ -27779,7 +27779,7 @@ Date:   Tue Jun 28 20:45:03 2005 -0700
     Signed-off-by: Linus Torvalds <torvalds@osdl.org>
 
 commit c016e2257acd00a7ffd87fa1eec896138563d1aa
-Author: S�bastien Dugu <sebastien.dugue@bull.net>
+Author: Sébastien Dugu <sebastien.dugue@bull.net>
 Date:   Tue Jun 28 20:44:59 2005 -0700
 
     [PATCH] aio-retry-fix: fix aio retry work queueing
@@ -27793,7 +27793,7 @@ Date:   Tue Jun 28 20:44:59 2005 -0700
     aio_run_aiocb so that subsequent retries will be handled by the aio worker
     thread.
     
-    Signed-off-by: S�bastien Dugu� <sebastien.dugue@bull.net>
+    Signed-off-by: Sébastien Dugué <sebastien.dugue@bull.net>
     Acked-by: Benjamin LaHaise <benjamin.c.lahaise@intel.com>
     Signed-off-by: Andrew Morton <akpm@osdl.org>
     Signed-off-by: Linus Torvalds <torvalds@osdl.org>
@@ -38386,7 +38386,7 @@ Date:   Sat Jun 25 14:54:36 2005 -0700
     Signed-off-by: Linus Torvalds <torvalds@osdl.org>
 
 commit 09ffd94fb15d85fbf9eebb8180f50264b264d6fe
-Author: Lorenzo Hern�ndez Garc�a-Hierro <lorenzo@gnu.org>
+Author: Lorenzo Hernández García-Hierro <lorenzo@gnu.org>
 Date:   Sat Jun 25 14:54:35 2005 -0700
 
     [PATCH] selinux: add executable heap check
@@ -38413,7 +38413,7 @@ Date:   Sat Jun 25 14:54:35 2005 -0700
     Signed-off-by: Linus Torvalds <torvalds@osdl.org>
 
 commit 6b9921976f0861e04828b3aff66696c1f3fd900d
-Author: Lorenzo Hernandez Garc�a-Hierro <lorenzo@gnu.org>
+Author: Lorenzo Hernandez García-Hierro <lorenzo@gnu.org>
 Date:   Sat Jun 25 14:54:34 2005 -0700
 
     [PATCH] selinux: add executable stack check
@@ -59349,20 +59349,20 @@ Date:   Mon Apr 25 19:46:48 2005 -0700
     
     This patch fixes the following warnings:
     
-    drivers/scsi/dpt_i2o.c: In function ‘adpt_isr’:
-    drivers/scsi/dpt_i2o.c:2030: warning: passing argument 1 of ‘readl’ makes pointer from integer without a cast
-    drivers/scsi/dpt_i2o.c:2031: warning: passing argument 1 of ‘readl’ makes pointer from integer without a cast
-    drivers/scsi/dpt_i2o.c:2042: warning: passing argument 1 of ‘readl’ makes pointer from integer without a cast
-    drivers/scsi/dpt_i2o.c:2043: warning: passing argument 2 of ‘writel’ makes pointer from integer without a cast
-    drivers/scsi/dpt_i2o.c:2046: warning: passing argument 1 of ‘readl’ makes pointer from integer without a cast
-    drivers/scsi/dpt_i2o.c:2048: warning: passing argument 1 of ‘readl’ makes pointer from integer without a cast
-    drivers/scsi/dpt_i2o.c:2055: warning: passing argument 1 of ‘readl’ makes pointer from integer without a cast
-    drivers/scsi/dpt_i2o.c:2062: warning: passing argument 1 of ‘readl’ makes pointer from integer without a cast
-    drivers/scsi/dpt_i2o.c:2069: warning: passing argument 1 of ‘readl’ makes pointer from integer without a cast
-    drivers/scsi/dpt_i2o.c: In function ‘adpt_i2o_to_scsi’: drivers/scsi/dpt_i2o.c:2239: warning: passing argument 1 of ‘readl’ makes pointer from integer without a cast
-    drivers/scsi/dpt_i2o.c:2243: warning: passing argument 1 of ‘readl’ makes pointer from integer without a cast
-    drivers/scsi/dpt_i2o.c:2248: warning: passing argument 1 of ‘readl’ makes pointer from integer without a cast
-    drivers/scsi/dpt_i2o.c:2259: warning: passing argument 1 of ‘readl’ makes pointer from integer without a cast
+    drivers/scsi/dpt_i2o.c: In function âadpt_isrâ:
+    drivers/scsi/dpt_i2o.c:2030: warning: passing argument 1 of âreadlâ makes pointer from integer without a cast
+    drivers/scsi/dpt_i2o.c:2031: warning: passing argument 1 of âreadlâ makes pointer from integer without a cast
+    drivers/scsi/dpt_i2o.c:2042: warning: passing argument 1 of âreadlâ makes pointer from integer without a cast
+    drivers/scsi/dpt_i2o.c:2043: warning: passing argument 2 of âwritelâ makes pointer from integer without a cast
+    drivers/scsi/dpt_i2o.c:2046: warning: passing argument 1 of âreadlâ makes pointer from integer without a cast
+    drivers/scsi/dpt_i2o.c:2048: warning: passing argument 1 of âreadlâ makes pointer from integer without a cast
+    drivers/scsi/dpt_i2o.c:2055: warning: passing argument 1 of âreadlâ makes pointer from integer without a cast
+    drivers/scsi/dpt_i2o.c:2062: warning: passing argument 1 of âreadlâ makes pointer from integer without a cast
+    drivers/scsi/dpt_i2o.c:2069: warning: passing argument 1 of âreadlâ makes pointer from integer without a cast
+    drivers/scsi/dpt_i2o.c: In function âadpt_i2o_to_scsiâ: drivers/scsi/dpt_i2o.c:2239: warning: passing argument 1 of âreadlâ makes pointer from integer without a cast
+    drivers/scsi/dpt_i2o.c:2243: warning: passing argument 1 of âreadlâ makes pointer from integer without a cast
+    drivers/scsi/dpt_i2o.c:2248: warning: passing argument 1 of âreadlâ makes pointer from integer without a cast
+    drivers/scsi/dpt_i2o.c:2259: warning: passing argument 1 of âreadlâ makes pointer from integer without a cast
     
     It define variables which are only used with a type of 'void __iomem *'
     with this type instead of the incorrect 'unsigned long' type.

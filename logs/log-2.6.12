@@ -1425,7 +1425,7 @@ Date:   Wed Mar 30 22:31:02 2005 -0800
     Signed-off-by: Greg Kroah-Hartman <gregkh@suse.de>
 
 commit e229b0f7bf6d2c347240f8309435c43f6fd951e0
-Author: Rafael Ávila de Espíndola <rafael.espindola@gmail.com>
+Author: Rafael Ãvila de EspÃ­ndola <rafael.espindola@gmail.com>
 Date:   Wed Mar 30 22:30:43 2005 -0800
 
     [PATCH] I2C: lsb in emc6d102 and adm1027
@@ -1440,7 +1440,7 @@ Date:   Wed Mar 30 22:30:43 2005 -0800
     they become more readable this way.
     
     
-    Signed-off-by: Rafael Ávila de Espíndola <rafael.espindola@gmail.com>
+    Signed-off-by: Rafael Ãvila de EspÃ­ndola <rafael.espindola@gmail.com>
     Signed-off-by: Greg Kroah-Hartman <gregkh@suse.de>
 
 commit 2f4ce18a3d9ce87b82c26ced004e7136d2ffce63
@@ -6268,7 +6268,7 @@ Date:   Mon Mar 28 04:01:12 2005 -0800
     Signed-off-by: Linus Torvalds <torvalds@osdl.org>
 
 commit 58aceba09b4f67abd309d199de8f2da375f45e88
-Author: Jakub Jelínek <jakub@redhat.com>
+Author: Jakub JelÃ­nek <jakub@redhat.com>
 Date:   Mon Mar 28 04:00:54 2005 -0800
 
     [PATCH] Futex: make futex_wait() atomic again
@@ -6950,7 +6950,7 @@ Date:   Mon Mar 28 03:51:36 2005 -0800
     
     This patch makes it possible to use the packet writing driver with
     DVD-RAM discs. The pktcdvd driver is not needed for writing to DVD-RAM
-    discs but it can improve write performance. Polgár István reports:
+    discs but it can improve write performance. PolgÃ¡r IstvÃ¡n reports:
     
     	I wrote 178716Kb data to DVD-RAM without pktcdvd driver within
     	4.54 minutes. With pktcdvd driver it took me 2.33 minutes.
@@ -8751,7 +8751,7 @@ Date:   Mon Mar 28 03:20:04 2005 -0800
     Signed-off-by: Linus Torvalds <torvalds@osdl.org>
 
 commit 89c9f6cc548ab1d30df4c866644e131524783d62
-Author: Herbert Pötzl <herbert@13thfloor.at>
+Author: Herbert PÃ¶tzl <herbert@13thfloor.at>
 Date:   Mon Mar 28 03:19:48 2005 -0800
 
     [PATCH] include cleanup in pgalloc.h
@@ -8764,7 +8764,7 @@ Date:   Mon Mar 28 03:19:48 2005 -0800
     
     http://osdl.org/plm-cgi/plm?module=patch_info&patch_id=4313
     
-    Signed-off-by: Herbert Pötzl <herbert@13thfloor.at>
+    Signed-off-by: Herbert PÃ¶tzl <herbert@13thfloor.at>
     Signed-off-by: Andrew Morton <akpm@osdl.org>
     Signed-off-by: Linus Torvalds <torvalds@osdl.org>
 
@@ -12312,7 +12312,7 @@ Date:   Tue Mar 22 07:53:22 2005 -0500
     
     The pre-allocation of tx bounce buffers is, of course, removed.
     
-    Acked-by: Pekka Pietikäinen <pp@netppl.fi>
+    Acked-by: Pekka PietikÃ¤inen <pp@netppl.fi>
     Signed-off-by: John W. Linville <linville@tuxdriver.com>
     Signed-off-by: Andrew Morton <akpm@osdl.org>
     Signed-off-by: Jeff Garzik <jgarzik@pobox.com>
@@ -12419,7 +12419,7 @@ Date:   Tue Mar 22 04:07:41 2005 -0800
     Signed-off-by: David S. Miller <davem@davemloft.net>
 
 commit 93c1d45d97a31da46f23ab7dccfdaa6f3d592305
-Author: François Romieu <romieu@fr.zoreil.com>
+Author: FranÃ§ois Romieu <romieu@fr.zoreil.com>
 Date:   Tue Mar 22 04:06:35 2005 -0800
 
     [IPV4]: Fix early use of inline in route.c
@@ -17684,7 +17684,7 @@ Date:   Tue Mar 15 00:12:13 2005 -0800
     Cset exclude: kravetz@us.ibm.com[torvalds]|ChangeSet|20050314002422|18516
 
 commit 5055b1345ca688b0070621fe56f59fab020acbb9
-Author: Kai Mäkisara <kai.makisara@kolumbus.fi>
+Author: Kai MÃ¤kisara <kai.makisara@kolumbus.fi>
 Date:   Tue Mar 15 01:52:18 2005 -0600
 
     [PATCH] SCSI tape security: require CAP_ADMIN for SG_IO etc.
@@ -17714,7 +17714,7 @@ Date:   Mon Mar 14 23:50:14 2005 -0800
     Linux 2.6.11.4
 
 commit 43e79be5c1ab7dae2a11e53c8bb650b06c82ad59
-Author: Kai Mäkisara <kai.makisara@kolumbus.fi>
+Author: Kai MÃ¤kisara <kai.makisara@kolumbus.fi>
 Date:   Tue Mar 15 01:48:37 2005 -0600
 
     [PATCH] SCSI tape fixes: remove f_pos handling
@@ -17727,7 +17727,7 @@ Date:   Tue Mar 15 01:48:37 2005 -0600
     Signed-off-by: James Bottomley <James.Bottomley@SteelEye.com>
 
 commit e8ad22baee71611c026e478f8132fb7f47b79a29
-Author: Kai Mäkisara <kai.makisara@kolumbus.fi>
+Author: Kai MÃ¤kisara <kai.makisara@kolumbus.fi>
 Date:   Tue Mar 15 01:41:31 2005 -0600
 
     [PATCH] SCSI tape fixes (new version): sense descriptor
@@ -17805,7 +17805,7 @@ Date:   Mon Mar 14 22:39:37 2005 -0600
     Signed-off-by: James Bottomley <James.Bottomley@SteelEye.com>
 
 commit bb0d28aa64b2da37b3d5e46dd0ad9735f244b5a5
-Author: Kai Mäkisara <kai.makisara@kolumbus.fi>
+Author: Kai MÃ¤kisara <kai.makisara@kolumbus.fi>
 Date:   Mon Mar 14 22:37:07 2005 -0600
 
     [PATCH] SCSI tape fixes: sense descriptor init, bsf->weof, blkno,
@@ -21354,14 +21354,14 @@ Date:   Sun Mar 13 00:28:05 2005 +0100
     Signed-off-by: Sam Ravnborg <sam@ravnborg.org>
 
 commit c157282ddf285805337bd5dac1bebeff546005f5
-Author: Romain Liévin <lkml@lievin.net>
+Author: Romain LiÃ©vin <lkml@lievin.net>
 Date:   Sun Mar 13 00:15:05 2005 +0100
 
     kconfig: gconfig - fix 2 warnings
     
     This patch fixes some warnings about GtkToolButton in gconfig
     
-    Signed-off-by: Romain Liévin <lkml@lievin.net>
+    Signed-off-by: Romain LiÃ©vin <lkml@lievin.net>
     Signed-off-by: Sam Ravnborg <sam@ravnborg.org>
 
 commit 7a855b2eac6aa3d3b24e615809c4cb87b9e1487b
@@ -23093,7 +23093,7 @@ Date:   Fri Mar 11 13:26:34 2005 -0500
     Signed-off-by: Jeff Garzik <jgarzik@pobox.com>
 
 commit a243576b5acccdf0b7a235aff643a598230d9a11
-Author: François Romieu <romieu@fr.zoreil.com>
+Author: FranÃ§ois Romieu <romieu@fr.zoreil.com>
 Date:   Fri Mar 11 13:26:21 2005 -0500
 
     [PATCH] Fix r8169: panic on 2.6.11
@@ -29120,7 +29120,7 @@ Date:   Wed Mar 9 04:44:37 2005 -0800
     Signed-off-by: David S. Miller <davem@davemloft.net>
 
 commit 1cc6b1043b153dbff4458f7ec6ef5f712ea353d2
-Author: Herbert Pötzl <herbert@13thfloor.at>
+Author: Herbert PÃ¶tzl <herbert@13thfloor.at>
 Date:   Wed Mar 9 04:43:08 2005 -0800
 
     [NET]: Passcred cleanup in struct sock
@@ -34449,7 +34449,7 @@ Date:   Mon Mar 7 17:25:19 2005 -0800
     Signed-off-by: Linus Torvalds <torvalds@osdl.org>
 
 commit cf90416303a8720cab80d4664a910922431af8c0
-Author: Kai Mäkisara <kai.makisara@kolumbus.fi>
+Author: Kai MÃ¤kisara <kai.makisara@kolumbus.fi>
 Date:   Mon Mar 7 17:25:05 2005 -0800
 
     [PATCH] make st seekable again
@@ -40971,7 +40971,7 @@ Date:   Thu Mar 3 14:41:40 2005 +0200
     Signed-off-by: James Bottomley <James.Bottomley@SteelEye.com>
 
 commit c1f63ffc23203a79d0339a21b180fd649356d3a8
-Author: Kai Mäkisara <kai.makisara@kolumbus.fi>
+Author: Kai MÃ¤kisara <kai.makisara@kolumbus.fi>
 Date:   Thu Mar 3 14:34:52 2005 +0200
 
     [PATCH] SCSI tape: write filemark before rewind etc. when writing
@@ -44098,7 +44098,7 @@ Date:   Wed Feb 23 21:37:57 2005 +0100
     Manual merge
 
 commit 26f1fccbdf243a1ca4805359bbed52cf51ca4d4e
-Author: François Romieu <romieu@fr.zoreil.com>
+Author: FranÃ§ois Romieu <romieu@fr.zoreil.com>
 Date:   Wed Feb 23 15:00:31 2005 -0500
 
     [PATCH] strip: use of netdev_priv
@@ -45144,7 +45144,7 @@ Date:   Tue Feb 22 12:18:48 2005 +0100
     Signed-off-by: James Bottomley <James.Bottomley@SteelEye.com>
 
 commit cb406274b79f002b173874b8271be498494f8e58
-Author: Kai Mäkisara <kai.makisara@kolumbus.fi>
+Author: Kai MÃ¤kisara <kai.makisara@kolumbus.fi>
 Date:   Tue Feb 22 12:13:21 2005 +0100
 
     [PATCH] SCSI tape descriptor based sense data support
@@ -47584,7 +47584,7 @@ Date:   Tue Feb 8 20:00:02 2005 +0100
 
     input: Add a new ID to the Logitech ForceFeedback joystick driver.
     
-    From: Rainer Kümmerle <svrmgrl@gmx.net>
+    From: Rainer KÃ¼mmerle <svrmgrl@gmx.net>
     Acked-by: Johann Deneux <johann.deneux@it.uu.se>
     Signed-off-by: Vojtech Pavlik <vojtech@suse.cz>
 
@@ -52126,7 +52126,7 @@ Date:   Mon Jun 13 15:10:49 2005 -0700
     Signed-off-by: David S. Miller <davem@davemloft.net>
 
 commit 77bd91967a97e5b94ae36113efe1d9e4f68a716e
-Author: R�mi Denis-Courmont <rdenis@simphalempin.com>
+Author: Rémi Denis-Courmont <rdenis@simphalempin.com>
 Date:   Mon Jun 13 15:01:34 2005 -0700
 
     [IPv6] Don't generate temporary for TUN devices
@@ -52148,7 +52148,7 @@ Date:   Mon Jun 13 15:01:34 2005 -0700
     As far as I could fine, TUN virtual device from TUNTAP is the very only
     sort of device using ARPHRD_NONE as kernel device type.
     
-    Signed-off-by: R�mi Denis-Courmont <rdenis@simphalempin.com>
+    Signed-off-by: Rémi Denis-Courmont <rdenis@simphalempin.com>
     Acked-by: YOSHIFUJI Hideaki <yoshfuji@linux-ipv6.org>
     Signed-off-by: David S. Miller <davem@davemloft.net>
 
@@ -54205,12 +54205,12 @@ Date:   Fri Jun 3 20:52:26 2005 +0100
     Signed-off-by: Russell King <rmk+kernel@arm.linux.org.uk> <rmk+kernel@arm.linux.org.uk>
 
 commit 105bb2698b54a838165947199f1c8be5c2e7d9bb
-Author: Albrecht Dre� <albrecht.dress@com.rmk.(none)>
+Author: Albrecht Dreß <albrecht.dress@com.rmk.(none)>
 Date:   Fri Jun 3 20:52:26 2005 +0100
 
     [PATCH] ARM: 2694/1: [s3c2410/dma] release irq properly to fix kernel oops
     
-    Patch from Albrecht Dre�
+    Patch from Albrecht Dreß
     
     Problem:
     When a module requests a DMA channel via the function s3c2410_dma_request(), this function requests the appropriate irq under the name of the client module. When the client module is unloaded, it calls s3c2410_dma_free() which does not free the irq. Consequently, when e.g. running "cat /proc/interrupts", the irq owner points to freed memory, leading to a kernel oops.
@@ -54219,7 +54219,7 @@ Date:   Fri Jun 3 20:52:26 2005 +0100
     Fix:
     trivial, below
     
-    Signed-off-by: Albrecht Dre�
+    Signed-off-by: Albrecht Dreß
     Signed-off-by: Russell King <rmk+kernel@arm.linux.org.uk> <rmk+kernel@arm.linux.org.uk>
 
 commit 4ab5c01c7cc28f29d5cf5f2a591cb6f7bbece48e
@@ -60939,7 +60939,7 @@ Date:   Mon May 16 21:53:17 2005 -0700
     macros" patch, which replaced a decrement operation in with an increment
     macro in try_to_unmap_one().
     
-    Signed-off-by: Bj�rn Steinbrink <B.Steinbrink@gmx.de>
+    Signed-off-by: Björn Steinbrink <B.Steinbrink@gmx.de>
     Signed-off-by: Andrew Morton <akpm@osdl.org>
     Signed-off-by: Linus Torvalds <torvalds@osdl.org>
 
@@ -78220,8 +78220,8 @@ Date:   Sat Apr 16 15:24:29 2005 -0700
     
     make defconfig give the following error on ppc (gcc-4):
     
-    arch/ppc/syslib/open_pic.c:36: error: static declaration of ‘OpenPIC’ follows non-static declaration
-    arch/ppc/syslib/open_pic_defs.h:175: error: previous declaration of ‘OpenPIC’ was here
+    arch/ppc/syslib/open_pic.c:36: error: static declaration of âOpenPICâ follows non-static declaration
+    arch/ppc/syslib/open_pic_defs.h:175: error: previous declaration of âOpenPICâ was here
     
     Signed-Off-By: Benoit Boissinot <benoit.boissinot@ens-lyon.org>
     Signed-off-by: Andrew Morton <akpm@osdl.org>
@@ -78235,10 +78235,10 @@ Date:   Sat Apr 16 15:24:28 2005 -0700
     
     make defconfig give the following error on ppc (gcc-4):
     
-    arch/ppc/syslib/prom_init.c:120: error: static declaration of ‘prom_display_paths’ follows non-static declaration
-    include/asm/prom.h:17: error: previous declaration of ‘prom_display_paths’ was here
-    arch/ppc/syslib/prom_init.c:122: error: static declaration of ‘prom_num_displays’ follows non-static declaration
-    include/asm/prom.h:18: error: previous declaration of ‘prom_num_displays’ was here
+    arch/ppc/syslib/prom_init.c:120: error: static declaration of âprom_display_pathsâ follows non-static declaration
+    include/asm/prom.h:17: error: previous declaration of âprom_display_pathsâ was here
+    arch/ppc/syslib/prom_init.c:122: error: static declaration of âprom_num_displaysâ follows non-static declaration
+    include/asm/prom.h:18: error: previous declaration of âprom_num_displaysâ was here
     
     Signed-Off-By: Benoit Boissinot <benoit.boissinot@ens-lyon.org>
     Signed-off-by: Andrew Morton <akpm@osdl.org>
@@ -78252,9 +78252,9 @@ Date:   Sat Apr 16 15:24:28 2005 -0700
     
     make defconfig give the following error on ppc (gcc-4):
     
-    arch/ppc/kernel/time.c:92: error: static declaration of ‘time_offset’
+    arch/ppc/kernel/time.c:92: error: static declaration of âtime_offsetâ
     follows non-static declaration
-    include/linux/timex.h:236: error: previous declaration of ‘time_offset’
+    include/linux/timex.h:236: error: previous declaration of âtime_offsetâ
     was here
     
     The following patch solves it (time_offset is declared in timer.c).
