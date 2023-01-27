@@ -4,10 +4,20 @@ addrfile="addresses-${kernel_version}"
 subject="Linux kernel development reports for the ${kernel_version} release"
 msg="email_message"
 
-for address in `cat $addrfile`
+if [ ! -f "$addrfile" ] ; then
+	echo "Error: $addrfile file not found"
+	exit 1
+fi
+
+if [ ! -f "$msg" ] ; then
+	echo "Error: $msg file not found"
+	exit 1
+fi
+
+while read -r address
 do
 	echo "sending message for ${kernel_version} to $address"
 	mutt -s "$subject" "$address" <  $msg >> spam.log 2>&1
 #	sleep 1
-done
+done < "$addrfile"
 
