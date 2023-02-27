@@ -18,6 +18,13 @@ while read -r address
 do
 	echo "sending message for ${kernel_version} to $address"
 	mutt -s "$subject" "$address" <  $msg >> spam.log 2>&1
+	
+
+	if [ $? -ne 0 ]; then
+        echo "Error: failed to send email to $address"
+        fi
+
+	
 #	sleep 1
 done < "$addrfile"
 
