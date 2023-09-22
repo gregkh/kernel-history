@@ -3,7 +3,7 @@
 use warnings;
 use strict;
 
-my @core_files = ("init", "block", "ipc", "kernel", "lib", "mm", "virt");
+my @core_files = ("init", "block", "ipc", "kernel", "lib", "mm", "virt", "io_uring", "rust");
 my @fs_files = ("fs");
 my @driver_files = ("crypto", "drivers", "sound", "security");
 my @net_files = ("net");

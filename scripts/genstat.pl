@@ -41,12 +41,12 @@
 my $start = "";
 my $end = "";
 
-my @core_files = ("init", "block", "ipc", "kernel", "lib", "mm", "virt");
+my @core_files = ("init", "block", "ipc", "kernel", "lib", "mm", "virt", "io_uring", "rust");
 my @fs_files = ("fs");
 my @driver_files = ("crypto", "drivers", "sound", "security");
 my @net_files = ("net");
 my @arch_files = ("arch");
-my @misc_files = ("Documentation", "scripts", "samples", "usr", "MAINTAINERS", "CREDITS", "README", ".gitignore", "Kbuild", "Makefile", "REPORTING-BUGS", ".mailmap", "COPYING", "tools", "Kconfig", "LICENSES", "certs", ".clang-format");
+my @misc_files = ("Documentation", "scripts", "samples", "usr", "MAINTAINERS", "CREDITS", "README", ".gitignore", "Kbuild", "Makefile", "REPORTING-BUGS", ".mailmap", "COPYING", "tools", "Kconfig", "LICENSES", "certs", ".clang-format", ".gitattributes");
 my @firmware_files = ("firmware");
 
 my $overall_add = 0;
@@ -88,6 +88,8 @@ sub include_category($$$$$)
 	if (($filename eq "linux") ||
 	    ($filename eq "keys") ||
 	    ($filename eq "trace") ||
+	    ($filename eq "memory") ||
+	    ($filename eq "vdso") ||
 	    ($filename eq "uapi") ||
 	    ($filename eq "Kbuild")) {
 		$core_add += $add;
@@ -105,6 +107,7 @@ sub include_category($$$$$)
 		 ($filename eq "rdma") ||
 		 ($filename eq "rxrpc") ||
 		 ($filename eq "scsi") ||
+		 ($filename eq "ufs") ||
 		 ($filename eq "ras") ||
 		 ($filename eq "sound") ||
 		 ($filename eq "kvm") ||
@@ -113,6 +116,11 @@ sub include_category($$$$$)
 		$driver_add += $add;
 		$driver_del += $del;
 		$driver_mod += $mod;
+	} elsif (($filename eq "kunit") ||
+		 ($filename eq "rv")) {
+		$misc_add += $add;
+		$misc_del += $del;
+		$misc_mod += $mod;
 	} elsif (($filename eq "net")) {
 		$net_add += $add;
 		$net_del += $del;
