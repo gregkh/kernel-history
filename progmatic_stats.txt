@@ -1,0 +1,19 @@
+2024:
+	4992 developers
+	354 employers found
+	76496 changes
+	8.7 changes/hour
+	40 changes/day in stable trees	(20%)
+	10 CVE/day
+
+Size:
+	39.8 million lines
+	16K rust
+
+Last release:
+	63 days (9 weeks)
+	2001 developers
+	210 companies
+	8.6 changes/hour  (6.7 release was 10.3 changes in Jan 2024)
+
+
