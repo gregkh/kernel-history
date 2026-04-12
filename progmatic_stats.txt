@@ -7,9 +7,9 @@
 	10 CVE/day
 
 	1/3 developers contributed 1 change (1500)
-	691 2
-	410 3
-	260 4
+	691 contributed 2 changes
+	410 contributed 3 changes
+	260 contributed 4 changes
 
 Size:
 	39.8 million lines
