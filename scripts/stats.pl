@@ -14,7 +14,8 @@ my @misc_files = (
 		"Kbuild", "Makefile", "COPYING", "REPORTING-BUGS",
 		".mailmap", "tools", "Kconfig", "certs", ".cocciconfig",
 		".gitattributes", ".get_maintainer.ignore", "LICENSES",
-		".clang-format",
+		".clang-format", ".pylintrc", ".clippy.toml",
+		".rustfmt.toml", ".editorconfig",
 	);
 my @firmware_files = ("firmware");
 
@@ -55,7 +56,9 @@ sub include_category($$)
 	} elsif (($filename eq "acpi") ||
 		 ($filename eq "clocksource") ||
 		 ($filename eq "crypto") ||
+		 ($filename eq "cxl") ||
 		 ($filename eq "drm") ||
+		 ($filename eq "hyperv") ||
 		 ($filename eq "kvm") ||
 		 ($filename eq "media") ||
 		 ($filename eq "memory") ||
@@ -64,6 +67,7 @@ sub include_category($$)
 		 ($filename eq "pcmcia") ||
 		 ($filename eq "ras") ||
 		 ($filename eq "rdma") ||
+		 ($filename eq "rv") ||
 		 ($filename eq "rxrpc") ||
 		 ($filename eq "scsi") ||
 		 ($filename eq "soc") ||

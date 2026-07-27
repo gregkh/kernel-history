@@ -46,7 +46,15 @@ my @fs_files = ("fs");
 my @driver_files = ("crypto", "drivers", "sound", "security");
 my @net_files = ("net");
 my @arch_files = ("arch");
-my @misc_files = ("Documentation", "scripts", "samples", "usr", "MAINTAINERS", "CREDITS", "README", ".gitignore", "Kbuild", "Makefile", "REPORTING-BUGS", ".mailmap", "COPYING", "tools", "Kconfig", "LICENSES", "certs", ".clang-format", ".gitattributes");
+my @misc_files = (
+		"Documentation", "scripts", "samples", "usr",
+		"MAINTAINERS", "CREDITS", "README", ".gitignore",
+		"Kbuild", "Makefile", "COPYING", "REPORTING-BUGS",
+		".mailmap", "tools", "Kconfig", "certs", ".cocciconfig",
+		".gitattributes", ".get_maintainer.ignore", "LICENSES",
+		".clang-format", ".pylintrc", ".clippy.toml",
+		".rustfmt.toml", ".editorconfig",
+	);
 my @firmware_files = ("firmware");
 
 my $overall_add = 0;
@@ -98,20 +106,24 @@ sub include_category($$$$$)
 	} elsif (($filename eq "acpi") ||
 		 ($filename eq "clocksource") ||
 		 ($filename eq "crypto") ||
+		 ($filename eq "cxl") ||
 		 ($filename eq "drm") ||
+		 ($filename eq "hyperv") ||
+		 ($filename eq "kvm") ||
 		 ($filename eq "media") ||
-		 ($filename eq "mtd") ||
+		 ($filename eq "memory") ||
 		 ($filename eq "misc") ||
+		 ($filename eq "mtd") ||
 		 ($filename eq "pcmcia") ||
-		 ($filename eq "target") ||
+		 ($filename eq "ras") ||
 		 ($filename eq "rdma") ||
+		 ($filename eq "rv") ||
 		 ($filename eq "rxrpc") ||
 		 ($filename eq "scsi") ||
-		 ($filename eq "ufs") ||
-		 ($filename eq "ras") ||
-		 ($filename eq "sound") ||
-		 ($filename eq "kvm") ||
 		 ($filename eq "soc") ||
+		 ($filename eq "sound") ||
+		 ($filename eq "target") ||
+		 ($filename eq "ufs") ||
 		 ($filename eq "video")) {
 		$driver_add += $add;
 		$driver_del += $del;
